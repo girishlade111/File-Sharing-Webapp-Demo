@@ -6,6 +6,8 @@ import SignUpForm from "./components/auth/SignUpForm";
 import Dashboard from "./components/pages/dashboard";
 import Success from "./components/pages/success";
 import Home from "./components/pages/home";
+import FileUpload from "./components/FileUpload";
+import FileDownload from "./components/FileDownload";
 import { AuthProvider, useAuth } from "../supabase/auth";
 import { Toaster } from "./components/ui/toaster";
 import { LoadingScreen, LoadingSpinner } from "./components/ui/loading-spinner";
@@ -31,6 +33,8 @@ function AppRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/signup" element={<SignUpForm />} />
+        <Route path="/upload" element={<FileUpload />} />
+        <Route path="/download/:fileId" element={<FileDownload />} />
         <Route
           path="/dashboard"
           element={
